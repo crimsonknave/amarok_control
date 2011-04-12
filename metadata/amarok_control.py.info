@@ -1,0 +1,6 @@
+[DockmanagerHelper]
+Name=Amarok Controls
+Description=Control Amarok media playback
+Icon=amarok
+AppName=amarok
+DBusName=org.kde.amarok
