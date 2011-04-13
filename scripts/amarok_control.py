@@ -49,15 +49,15 @@ class AmarokItem(DockManagerItem):
     self.add_menu_item("Next", "media-skip-forward", "Controls")
 
   def menu_pressed(self, menu_id):
-    if not self.player:
+    if self.player:
+      if self.id_map[menu_id] == "Play/Pause":
+        self.player.PlayPause()
+      elif self.id_map[menu_id] == "Next": 
+        self.player.Next()
+      elif self.id_map[menu_id] == "Previous": 
+        self.player.Prev()
+    else:
       return False
-
-    if self.id_map[menu_id] == "Play/Pause":
-      self.player.PlayPause()
-    elif self.id_map[menu_id] == "Next": 
-      self.player.Next()
-    elif self.id_map[menu_id] == "Previous": 
-      self.player.Prev()
 
 class AmarokSink(DockManagerSink):
   def item_path_found(self, pathtoitem, item):
