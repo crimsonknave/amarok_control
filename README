@@ -1,0 +1,8 @@
+Info:
+Adds a Play/Pause, Previous and Next menu items to amarok in Docky
+
+How to install:
+Docky helpers need to be in a tar to install.  Let's generate one!
+tar -cf amarok_control.tar metadata/amarok_control.py.info scripts/amarok_control.py
+Now go to the helper tab in the Docky menu, click install and navigate to the tar.
+You are all set!
